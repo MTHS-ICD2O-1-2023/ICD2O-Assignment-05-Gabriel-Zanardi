@@ -7,18 +7,29 @@
 "use strict"
 
 function myButtonClicked() {
+
   //input
-  let firstNumber = parseInt(document.getElementById("first-number").value)
-  let secondNumber = parseInt(document.getElementById("second-number").value)
+
+  let numberRepeat = parseInt(document.getElementById("first-number").value)
+
+
   //process
+  const numerator = 4
+  let denominator = 1
   let counter = 0
   let result = 0
-  while (counter < secondNumber) {
-    result += firstNumber
+
+
+  while (counter < numberRepeat) {
+    denominator += 2
+    numerator *= -1
+    result = numerator / denominator
     counter += 1
   }
-  let finalResult = result
+
   // output
   document.getElementById("final-answer").innerHTML =
     "Your result is " + finalResult
+
 }
+
