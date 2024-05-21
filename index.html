@@ -1,9 +1,74 @@
 <!DOCTYPE html>
+<!--Made by Gabriel-->
 <html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <p>Paragraph</p>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Triangle Angle Finder" />
+  <meta name="keywords" content="mths, ics2o" />
+  <meta name="author" content="Gabriel" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-teal.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <title>Triangle Angle Finder</title>
+</head>
+<body>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="./js/script.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Triangle Angle Finder</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="right-image">
+        <img src="./images/types-of-triangles-cropped.png" height="200" width="300"
+          alt="the main three types of triangles" />
+      </div>
+      <div class="page-content">
+        Please enter the three sizes
+      </div>
+      <br />
+      <!-- Simple Textfield -->
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="size-one">
+          <label class="mdl-textfield__label" for="number-toppings">size 1 here</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      </form>
+      <br />
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="size-two">
+          <label class="mdl-textfield__label" for="number-toppings">size 2 here</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      </form>
+      <br />
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="size-three">
+          <label class="mdl-textfield__label" for="number-toppings">size 3 here</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      </form>
+      <!-- Accent-colored raised button with ripple -->
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+        onclick="myButtonClicked()">
+        Click me for info
+      </button>
+      <br />
+      <br />
+      <div class="page-content-answer">
+        <div id="final-answer"></div>
+      </div>
+    </main>
+  </div>
+</body>
 </html>
