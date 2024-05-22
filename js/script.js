@@ -7,29 +7,23 @@
 "use strict"
 
 function myButtonClicked() {
+  // Input
+  let numberRepeat = parseInt(document.getElementById("number-repeat").value)
 
-  //input
-
-  let numberRepeat = parseInt(document.getElementById("first-number").value)
-
-
-  //process
-  const numerator = 4
+  // Process
+  let numerator = 4
   let denominator = 1
   let counter = 0
-  let result = 0
+  let result = 4
 
-
-  while (counter < numberRepeat) {
+  while (counter < numberRepeat - 1) {
     denominator += 2
-    numerator *= -1
-    result = numerator / denominator
+    numerator = numerator * -1  // Alternate the sign of numerator
+    result = result + (numerator / denominator)
     counter += 1
   }
 
-  // output
-  document.getElementById("final-answer").innerHTML =
-    "Your result is " + finalResult
-
+  // Output
+  document.getElementById("final-answer").innerHTML = "Your result is ≈ " + result.toFixed(4)
 }
 
